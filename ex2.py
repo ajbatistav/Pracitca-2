@@ -1,11 +1,15 @@
-print("Bienvenido por favor seleccione una de las sigueintes opciones")
-print("1- Convertir grados Celsius a Fahrenheit")
-print("2- Convertir dolar a pesos")
-print("3- Convertir metros a pies")
-print("4- Salir") 
+def menu():
+  print("Bienvenido por favor seleccione una de las sigueintes opciones")
+  print("1- Convertir grados Celsius a Fahrenheit")
+  print("2- Convertir dolar a pesos")
+  print("3- Convertir metros a pies")
+  print("4- Salir") 
+ 
 
-select = input()
+menu()
+select = input("> ")
 select = int(select)
+
 
 while select != 4:
   if select == 1:
@@ -14,14 +18,9 @@ while select != 4:
       res = celsius * 9/5 + 32
       print (str(res) + " Grados Fahrenheit")
       
-      print("1- Convertir grados Celsius a Fahrenheit")
-      print("2- Convertir dolar a pesos")
-      print("3- Convertir metros a pies")
-      print("4- Salir") 
-
-      select = input()
+      menu()
+      select = input("> ")
       select = int(select)
-
   elif select == 2:
        dolares = input("Introduzca cantidad de dolares: ")
        dolares = float(dolares)
@@ -30,14 +29,9 @@ while select != 4:
        print(str(dolares) + "$US equivale a " + str(pesos) + "$RD")
 
    
-       print("1- Convertir grados Celsius a Fahrenheit")
-       print("2- Convertir dolar a pesos")
-       print("3- Convertir metros a pies")
-       print("4- Salir") 
-
-       select = input()
+       menu()
+       select = input("> ")
        select = int(select)
-
   elif select == 3:
       metros = input("Introduzca la cantidad en metros: ")
       metros = float(metros)
@@ -46,23 +40,16 @@ while select != 4:
       print (metros, "m = ", pies, "pies")
 
       
-      print("1- Convertir grados Celsius a Fahrenheit")
-      print("2- Convertir dolar a pesos")
-      print("3- Convertir metros a pies")
-      print("4- Salir") 
-      select = input()
+      menu()
+      select = input("> ")
       select = int(select)
-      
   elif select >= 4:
       print("La opcion seleccionada no se encuentra en el menu")
       print("por favor, seleccione una de las siguientes opciones")
 
      
-      print("1- Convertir grados Celsius a Fahrenheit")
-      print("2- Convertir dolar a pesos")
-      print("3- Convertir metros a pies")
-      print("4- Salir")
-      select = input() 
+      menu()
+      select = input("> ")
       select = int(select)
-
-     
+if  select == 4:
+     print("Gracias por utilizar el programa")   
