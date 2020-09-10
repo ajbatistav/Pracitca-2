@@ -1,11 +1,7 @@
-c=1
+multiplo = 5
+conteo = 1
 
-for z in range(1000):
-      factor = (z + 1)
-      if factor%6 == 0:
-     
-         while c <= 12:
-             res = z * c
-             print (f"{z} X {c} = {res}")
-             c += 1  
-                 
+while conteo <= 200:
+    res = int(multiplo) * conteo
+    print (f"{multiplo} X {conteo} = {res}")
+    conteo += 1
